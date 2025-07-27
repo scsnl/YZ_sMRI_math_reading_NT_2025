@@ -27,33 +27,56 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 
 ```
 ├── data/
-│   ├── atlas/                     # Brainnetome atlas, Shirer networks, and ROI info
-│   ├── gmv/                       # Gray matter volume data for CMI-HBN and Stanford cohorts
-│   ├── subjectlist/               # Subject lists for both cohorts
-│   └── neurotransmitter/          # PET receptor data and parcellated receptor matrices
+│   ├── atlas/
+│   │   ├── BN_Atlas_246_1mm.nii
+│   │   ├── BN_Atlas_246_2mm.nii
+│   │   ├── BNA_subregions.xlsx
+│   │   ├── bn_atlas.xlsx
+│   │   └── Shirer_14Networks/
+│   ├── gmv/
+│   │   ├── gmv_cmi_n760.csv
+│   │   └── gmv_stanford_n231.csv
+│   ├── subjectlist/
+│   │   ├── subjectlist_cmi_n760.csv
+│   │   └── subjectlist_stanford_n231.csv
+│   └── neurotransmitter/
+│       ├── PET_nifti_images/
+│       ├── PET_parcellated/
+│       │   └── bn246/
+│       ├── nifti_images_19/
+│       ├── receptor_data_bn246.csv
+│       └── receptor_names_pet.npy
 │
 ├── scripts/
-│   ├── behavior/                  # Behavioral correlation analysis
+│   ├── age_analysis/
+│   ├── behavior/
+│   ├── BF/
 │   ├── cca/
-│   │   ├── full_sample/           # Whole-brain CCA for math and reading
-│   │   ├── prediction/            # Prediction analyses (CMI → Stanford)
-│   │   ├── visualization/         # Convert GMV weights to NIfTI for visualization
-│   │   └── table_top20.R          # Top 20% ROI analysis
-│   ├── age_analysis/              # Age-stratified CCA and GMV weight analyses
-│   ├── neurotransmitter/          # PET parcellation, regression, and receptor mapping
-│   ├── network_analysis/          # NMDA directionality and Shirer network analyses
-│   ├── control_analysis/          # IQ- and SES-controlled CCA analyses
-│   ├── spin/                      # Spin tests and distance matrix calculations
-│   └── BF/                        # Bayes Factor and replication BF analyses
+│   │   ├── full_sample/
+│   │   ├── prediction/
+│   │   ├── visualization/
+│   │   └── table_top20.R
+│   ├── control_analysis/
+│   │   ├── cmi/
+│   │   └── stanford/
+│   ├── network_analysis/
+│   ├── neurotransmitter/
+│   ├── shirer_to_bn/
+│   ├── spin/
+│   └── utility/
 │
 ├── results/
-│   ├── cca/                       # Outputs of math and reading CCAs
-│   ├── age_analysis/              # GMV weight maps per age bin
-│   ├── neurotransmitter/          # Receptor regression, FDR, and BF results
-│   └── network_analysis/          # Network-specific results and plots
+│   ├── age_analysis/
+│   ├── cca/
+│   │   ├── cmi/
+│   │   └── stanford/
+│   ├── network_analysis/
+│   └── neurotransmitter/
 │
-└── README.md                      # Project documentation
+└── README.md
 ```
+
+---
 
 **Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier.
 
