@@ -1,4 +1,4 @@
-# Glutamatergic signaling relates to brain organization for mathematical and reading abilities in children: a cross-cohort neurotransmitter mapping study
+# Glutamatergic signaling shapes brain organization for mathematical and reading abilities: A multicohort replication across 990 children
 
 © 2025 by The Board of Trustees of the Leland Stanford Junior University is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
