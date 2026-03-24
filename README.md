@@ -78,7 +78,8 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 
 ---
 
-**Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier.
+**Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier. After downloading the repository, users need to update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts so that they point to the local path of the repository in the user’s environment. Once these repository-level paths are updated, the scripts, including interanll called scripts (e.g., myRfunc.R), should run smoothly.
+
 
 ---
 
