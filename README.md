@@ -140,7 +140,7 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 - **Spin test:** `scripts/spin/Calculating_Distancematrix_BN.m`
 - **Regression:** `scripts/neurotransmitter/brainbeh_receptors_analysis.py`  
   (with `scripts/neurotransmitter/utility.py`)
-- **FDR correction:** `scripts/add_fdrp.R`
+- **FDR correction:** `scripts/neurotransmitter/add_fdrp.R`
 - **Bayes Factor:**  
   - CMI-HBN: `scripts/BF/getBF_neurotransmitter.R`
   - Replication BF: `scripts/BF/getBFr_neurotransmitter.R`
