@@ -1,4 +1,4 @@
-# Glutamatergic signaling maps onto brain organization for mathematical and reading abilities: A multicohort replication across 990 children
+# Glutamatergic signaling underlies brain structural organization for mathematical and reading abilities: A multicohort replication
 
 © 2025 by The Board of Trustees of the Leland Stanford Junior University is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
