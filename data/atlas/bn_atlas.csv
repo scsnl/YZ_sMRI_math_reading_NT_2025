@@ -1,0 +1,247 @@
+﻿Region ID,Gyrus,Description,Region Alias,Region Label
+1,Prefrontal Cortex,SFG_L_7_1,"A8m, medial area 8",SFG_L_7_1
+2,Prefrontal Cortex,SFG_R_7_1,"A8m, medial area 8",SFG_R_7_1
+3,Prefrontal Cortex,SFG_L_7_2,"A8dl, dorsolateral area 8",SFG_L_7_2
+4,Prefrontal Cortex,SFG_R_7_2,"A8dl, dorsolateral area 8",SFG_R_7_2
+5,Prefrontal Cortex,SFG_L_7_3,"A9l, lateral area 9",SFG_L_7_3
+6,Prefrontal Cortex,SFG_R_7_3,"A9l, lateral area 9",SFG_R_7_3
+7,Prefrontal Cortex,SFG_L_7_4,"A6dl, dorsolateral area 6",SFG_L_7_4
+8,Prefrontal Cortex,SFG_R_7_4,"A6dl, dorsolateral area 6",SFG_R_7_4
+9,Prefrontal Cortex,SFG_L_7_5,"A6m, medial area 6",SFG_L_7_5
+10,Prefrontal Cortex,SFG_R_7_5,"A6m, medial area 6",SFG_R_7_5
+11,Prefrontal Cortex,SFG_L_7_6,"A9m,medial area 9",SFG_L_7_6
+12,Prefrontal Cortex,SFG_R_7_6,"A9m,medial area 9",SFG_R_7_6
+13,Prefrontal Cortex,SFG_L_7_7,"A10m, medial area 10",SFG_L_7_7
+14,Prefrontal Cortex,SFG_R_7_7,"A10m, medial area 10",SFG_R_7_7
+15,Prefrontal Cortex,MFG_L_7_1,"A9/46d, dorsal area 9/46",MFG_L_7_1
+16,Prefrontal Cortex,MFG_R_7_1,"A9/46d, dorsal area 9/46",MFG_R_7_1
+17,Prefrontal Cortex,MFG_L_7_2,"IFJ, inferior frontal junction",MFG_L_7_2
+18,Prefrontal Cortex,MFG_R_7_2,"IFJ, inferior frontal junction",MFG_R_7_2
+19,Prefrontal Cortex,MFG_L_7_3,"A46, area 46",MFG_L_7_3
+20,Prefrontal Cortex,MFG_R_7_3,"A46, area 46",MFG_R_7_3
+21,Prefrontal Cortex,MFG_L_7_4,"A9/46v, ventral area 9/46 ",MFG_L_7_4
+22,Prefrontal Cortex,MFG_R_7_4,"A9/46v, ventral area 9/46 ",MFG_R_7_4
+23,Prefrontal Cortex,MFG_L_7_5,"A8vl, ventrolateral area 8",MFG_L_7_5
+24,Prefrontal Cortex,MFG_R_7_5,"A8vl, ventrolateral area 8",MFG_R_7_5
+25,Prefrontal Cortex,MFG_L_7_6,"A6vl, ventrolateral area 6",MFG_L_7_6
+26,Prefrontal Cortex,MFG_R_7_6,"A6vl, ventrolateral area 6",MFG_R_7_6
+27,Prefrontal Cortex,MFG_L_7_7,"A10l, lateral area10",MFG_L_7_7
+28,Prefrontal Cortex,MFG_R_7_7,"A10l, lateral area10",MFG_R_7_7
+29,Prefrontal Cortex,IFG_L_6_1,"A44d,dorsal area 44",IFG_L_6_1
+30,Prefrontal Cortex,IFG_R_6_1,"A44d,dorsal area 44",IFG_R_6_1
+31,Prefrontal Cortex,IFG_L_6_2,"IFS, inferior frontal sulcus",IFG_L_6_2
+32,Prefrontal Cortex,IFG_R_6_2,"IFS, inferior frontal sulcus",IFG_R_6_2
+33,Prefrontal Cortex,IFG_L_6_3,"A45c, caudal area 45",IFG_L_6_3
+34,Prefrontal Cortex,IFG_R_6_3,"A45c, caudal area 45",IFG_R_6_3
+35,Prefrontal Cortex,IFG_L_6_4,"A45r, rostral area 45",IFG_L_6_4
+36,Prefrontal Cortex,IFG_R_6_4,"A45r, rostral area 45",IFG_R_6_4
+37,Prefrontal Cortex,IFG_L_6_5,"A44op, opercular area 44",IFG_L_6_5
+38,Prefrontal Cortex,IFG_R_6_5,"A44op, opercular area 44",IFG_R_6_5
+39,Prefrontal Cortex,IFG_L_6_6,"A44v, ventral area 44",IFG_L_6_6
+40,Prefrontal Cortex,IFG_R_6_6,"A44v, ventral area 44",IFG_R_6_6
+41,Prefrontal Cortex,OrG_L_6_1,"A14m, medial area 14",OrG_L_6_1
+42,Prefrontal Cortex,OrG_R_6_1,"A14m, medial area 14",OrG_R_6_1
+43,Prefrontal Cortex,OrG_L_6_2,"A12/47o, orbital area 12/47",OrG_L_6_2
+44,Prefrontal Cortex,OrG_R_6_2,"A12/47o, orbital area 12/47",OrG_R_6_2
+45,Prefrontal Cortex,OrG_L_6_3,"A11l, lateral area 11",OrG_L_6_3
+46,Prefrontal Cortex,OrG_R_6_3,"A11l, lateral area 11",OrG_R_6_3
+47,Prefrontal Cortex,OrG_L_6_4,"A11m, medial area 11",OrG_L_6_4
+48,Prefrontal Cortex,OrG_R_6_4,"A11m, medial area 11",OrG_R_6_4
+49,Prefrontal Cortex,OrG_L_6_5,"A13, area 13",OrG_L_6_5
+50,Prefrontal Cortex,OrG_R_6_5,"A13, area 13",OrG_R_6_5
+51,Prefrontal Cortex,OrG_L_6_6,"A12/47l, lateral area 12/47",OrG_L_6_6
+52,Prefrontal Cortex,OrG_R_6_6,"A12/47l, lateral area 12/47",OrG_R_6_6
+53,Precentral Gyrus,PrG_L_6_1,"A4hf, area 4(head and face region)",PrG_L_6_1
+54,Precentral Gyrus,PrG_R_6_1,"A4hf, area 4(head and face region)",PrG_R_6_1
+55,Precentral Gyrus,PrG_L_6_2,"A6cdl, caudal dorsolateral area 6",PrG_L_6_2
+56,Precentral Gyrus,PrG_R_6_2,"A6cdl, caudal dorsolateral area 6",PrG_R_6_2
+57,Precentral Gyrus,PrG_L_6_3,"A4ul, area 4(upper limb region)",PrG_L_6_3
+58,Precentral Gyrus,PrG_R_6_3,"A4ul, area 4(upper limb region)",PrG_R_6_3
+59,Precentral Gyrus,PrG_L_6_4,"A4t, area 4(trunk region)",PrG_L_6_4
+60,Precentral Gyrus,PrG_R_6_4,"A4t, area 4(trunk region)",PrG_R_6_4
+61,Precentral Gyrus,PrG_L_6_5,"A4tl, area 4(tongue and larynx region)",PrG_L_6_5
+62,Precentral Gyrus,PrG_R_6_5,"A4tl, area 4(tongue and larynx region)",PrG_R_6_5
+63,Precentral Gyrus,PrG_L_6_6,"A6cvl, caudal ventrolateral area 6",PrG_L_6_6
+64,Precentral Gyrus,PrG_R_6_6,"A6cvl, caudal ventrolateral area 6",PrG_R_6_6
+65,Paracentral Lobule,PCL_L_2_1,"A1/2/3ll, area1/2/3 (lower limb region)",PCL_L_2_1
+66,Paracentral Lobule,PCL_R_2_1,"A1/2/3ll, area1/2/3 (lower limb region)",PCL_R_2_1
+67,Paracentral Lobule,PCL_L_2_2,"A4ll, area 4, (lower limb region)",PCL_L_2_2
+68,Paracentral Lobule,PCL_R_2_2,"A4ll, area 4, (lower limb region)",PCL_R_2_2
+69,Superior Temporal Gyrus,STG_L_6_1,"A38m, medial area 38",STG_L_6_1
+70,Superior Temporal Gyrus,STG_R_6_1,"A38m, medial area 38",STG_R_6_1
+71,Superior Temporal Gyrus,STG_L_6_2,"A41/42, area 41/42",STG_L_6_2
+72,Superior Temporal Gyrus,STG_R_6_2,"A41/42, area 41/42",STG_R_6_2
+73,Superior Temporal Gyrus,STG_L_6_3,TE1.0 and TE1.2,STG_L_6_3
+74,Superior Temporal Gyrus,STG_R_6_3,TE1.0 and TE1.2,STG_R_6_3
+75,Superior Temporal Gyrus,STG_L_6_4,"A22c, caudal area 22",STG_L_6_4
+76,Superior Temporal Gyrus,STG_R_6_4,"A22c, caudal area 22",STG_R_6_4
+77,Superior Temporal Gyrus,STG_L_6_5,"A38l, lateral area 38",STG_L_6_5
+78,Superior Temporal Gyrus,STG_R_6_5,"A38l, lateral area 38",STG_R_6_5
+79,Superior Temporal Gyrus,STG_L_6_6,"A22r, rostral area 22",STG_L_6_6
+80,Superior Temporal Gyrus,STG_R_6_6,"A22r, rostral area 22",STG_R_6_6
+81,Middle Temporal Gyrus,MTG_L_4_1,"A21c, caudal area 21",MTG_L_4_1
+82,Middle Temporal Gyrus,MTG_R_4_1,"A21c, caudal area 21",MTG_R_4_1
+83,Middle Temporal Gyrus,MTG_L_4_2,"A21r, rostral area 21",MTG_L_4_2
+84,Middle Temporal Gyrus,MTG_R_4_2,"A21r, rostral area 21",MTG_R_4_2
+85,Middle Temporal Gyrus,MTG_L_4_3,"A37dl, dorsolateral area37",MTG_L_4_3
+86,Middle Temporal Gyrus,MTG_R_4_3,"A37dl, dorsolateral area37",MTG_R_4_3
+87,Middle Temporal Gyrus,MTG_L_4_4,"aSTS, anterior superior temporal sulcus",MTG_L_4_4
+88,Middle Temporal Gyrus,MTG_R_4_4,"aSTS, anterior superior temporal sulcus",MTG_R_4_4
+89,Inferior Temporal Gyrus,ITG_L_7_1,"A20iv, intermediate ventral area 20",ITG_L_7_1
+90,Inferior Temporal Gyrus,ITG_R_7_1,"A20iv, intermediate ventral area 20",ITG_R_7_1
+91,Inferior Temporal Gyrus,ITG_L_7_2,"A37vm, ventromedial area37",ITG_L_7_2
+92,Inferior Temporal Gyrus,ITG_R_7_2,"A37vm, ventromedial area37",ITG_R_7_2
+93,Inferior Temporal Gyrus,ITG_L_7_3,"A20r, rostral area 20",ITG_L_7_3
+94,Inferior Temporal Gyrus,ITG_R_7_3,"A20r, rostral area 20",ITG_R_7_3
+95,Inferior Temporal Gyrus,ITG_L_7_4,"A20il, intermediate lateral area 20",ITG_L_7_4
+96,Inferior Temporal Gyrus,ITG_R_7_4,"A20il, intermediate lateral area 20",ITG_R_7_4
+97,Inferior Temporal Gyrus,ITG_L_7_5,"A37vl, ventrolateral area 37",ITG_L_7_5
+98,Inferior Temporal Gyrus,ITG_R_7_5,"A37vl, ventrolateral area 37",ITG_R_7_5
+99,Inferior Temporal Gyrus,ITG_L_7_6,"A20cl, caudolateral of area 20",ITG_L_7_6
+100,Inferior Temporal Gyrus,ITG_R_7_6,"A20cl, caudolateral of area 20",ITG_R_7_6
+101,Inferior Temporal Gyrus,ITG_L_7_7,"A20cv, caudoventral of area 20",ITG_L_7_7
+102,Inferior Temporal Gyrus,ITG_R_7_7,"A20cv, caudoventral of area 20",ITG_R_7_7
+103,Inferior Temporal Gyrus,FuG_L_3_1,"A20rv, rostroventral area 20",FuG_L_3_1
+104,Inferior Temporal Gyrus,FuG_R_3_1,"A20rv, rostroventral area 20",FuG_R_3_1
+105,Inferior Temporal Gyrus,FuG_L_3_2,"A37vm, medioventral area37",FuG_L_3_2
+106,Inferior Temporal Gyrus,FuG_R_3_2,"A37vm, medioventral area37",FuG_R_3_2
+107,Inferior Temporal Gyrus,FuG_L_3_3,"A37vl, ventrolatral area37",FuG_L_3_3
+108,Inferior Temporal Gyrus,FuG_R_3_3,"A37vl, ventrolatral area37",FuG_R_3_3
+109,Middle Temporal Gyrus,PhG_L_6_1,"A35/36r, rostral area 35/36",PhG_L_6_1
+110,Middle Temporal Gyrus,PhG_R_6_1,"A35/36r, rostral area 35/36",PhG_R_6_1
+111,Middle Temporal Gyrus,PhG_L_6_2,"A35/36c, caudal area 35/36",PhG_L_6_2
+112,Middle Temporal Gyrus,PhG_R_6_2,"A35/36c, caudal area 35/36",PhG_R_6_2
+113,Middle Temporal Gyrus,PhG_L_6_3,"TL, area TL (lateral PPHC, posterior parahippocampal gyrus)",PhG_L_6_3
+114,Middle Temporal Gyrus,PhG_R_6_3,"TL, area TL (lateral PPHC, posterior parahippocampal gyrus)",PhG_R_6_3
+115,Middle Temporal Gyrus,PhG_L_6_4,"A28/34, area 28/34 (EC, entorhinal cortex)",PhG_L_6_4
+116,Middle Temporal Gyrus,PhG_R_6_4,"A28/34, area 28/34 (EC, entorhinal cortex)",PhG_R_6_4
+117,Middle Temporal Gyrus,PhG_L_6_5,"TI, area TI(temporal agranular insular cortex)",PhG_L_6_5
+118,Middle Temporal Gyrus,PhG_R_6_5,"TI, area TI(temporal agranular insular cortex)",PhG_R_6_5
+119,Middle Temporal Gyrus,PhG_L_6_6,"TH, area TH (medial PPHC)",PhG_L_6_6
+120,Middle Temporal Gyrus,PhG_R_6_6,"TH, area TH (medial PPHC)",PhG_R_6_6
+121,Superior Temporal Gyrus,pSTS_L_2_1,"rpSTS, rostroposterior superior temporal sulcus",pSTS_L_2_1
+122,Superior Temporal Gyrus,pSTS_R_2_1,"rpSTS, rostroposterior superior temporal sulcus",pSTS_R_2_1
+123,Superior Temporal Gyrus,pSTS_L_2_2,"cpSTS, caudoposterior superior temporal sulcus",pSTS_L_2_2
+124,Superior Temporal Gyrus,pSTS_R_2_2,"cpSTS, caudoposterior superior temporal sulcus",pSTS_R_2_2
+125,Superior Parietal Lobule,SPL_L_5_1,"A7ip, intraparietal area 7(hIP3)",SPL_L_5_1
+126,Superior Parietal Lobule,SPL_R_5_1,"A7ip, intraparietal area 7(hIP3)",SPL_R_5_1
+127,Superior Parietal Lobule,SPL_L_5_2,"A7c, caudal area 7",SPL_L_5_2
+128,Superior Parietal Lobule,SPL_R_5_2,"A7c, caudal area 7",SPL_R_5_2
+129,Superior Parietal Lobule,SPL_L_5_3,"A7pc, postcentral area 7",SPL_L_5_3
+130,Superior Parietal Lobule,SPL_R_5_3,"A7pc, postcentral area 7",SPL_R_5_3
+131,Superior Parietal Lobule,SPL_L_5_4,"A5l, lateral area 5",SPL_L_5_4
+132,Superior Parietal Lobule,SPL_R_5_4,"A5l, lateral area 5",SPL_R_5_4
+133,Superior Parietal Lobule,SPL_L_5_5,"A7r, rostral area 7",SPL_L_5_5
+134,Superior Parietal Lobule,SPL_R_5_5,"A7r, rostral area 7",SPL_R_5_5
+135,Inferior Parietal Lobe,IPL_L_6_1,"A39c, caudal area 39(PGp)",IPL_L_6_1
+136,Inferior Parietal Lobe,IPL_R_6_1,"A39c, caudal area 39(PGp)",IPL_R_6_1
+137,Inferior Parietal Lobe,IPL_L_6_2,"A39rd, rostrodorsal area 39(Hip3)",IPL_L_6_2
+138,Inferior Parietal Lobe,IPL_R_6_2,"A39rd, rostrodorsal area 39(Hip3)",IPL_R_6_2
+139,Inferior Parietal Lobe,IPL_L_6_3,"A40rd, rostrodorsal area 40(PFt)",IPL_L_6_3
+140,Inferior Parietal Lobe,IPL_R_6_3,"A40rd, rostrodorsal area 40(PFt)",IPL_R_6_3
+141,Inferior Parietal Lobe,IPL_L_6_4,"A40c, caudal area 40(PFm)",IPL_L_6_4
+142,Inferior Parietal Lobe,IPL_R_6_4,"A40c, caudal area 40(PFm)",IPL_R_6_4
+143,Inferior Parietal Lobe,IPL_L_6_5,"A39rv, rostroventral area 39(PGa)",IPL_L_6_5
+144,Inferior Parietal Lobe,IPL_R_6_5,"A39rv, rostroventral area 39(PGa)",IPL_R_6_5
+145,Inferior Parietal Lobe,IPL_L_6_6,"A40rv, rostroventral area 40(PFop)",IPL_L_6_6
+146,Inferior Parietal Lobe,IPL_R_6_6,"A40rv, rostroventral area 40(PFop)",IPL_R_6_6
+147,"PCC, Precuneus",Pcun_L_4_1,"A7m, medial area 7(PEp)",Pcun_L_4_1
+148,"PCC, Precuneus",Pcun_R_4_1,"A7m, medial area 7(PEp)",Pcun_R_4_1
+149,"PCC, Precuneus",Pcun_L_4_2,"A5m, medial area 5(PEm)",Pcun_L_4_2
+150,"PCC, Precuneus",Pcun_R_4_2,"A5m, medial area 5(PEm)",Pcun_R_4_2
+151,"PCC, Precuneus",Pcun_L_4_3,"dmPOS, dorsomeidal parietooccipital  sulcus(PEr) ",Pcun_L_4_3
+152,"PCC, Precuneus",Pcun_R_4_3,"dmPOS, dorsomeidal parietooccipital  sulcus(PEr) ",Pcun_R_4_3
+153,"PCC, Precuneus",Pcun_L_4_4,"A31, area 31 (Lc1)",Pcun_L_4_4
+154,"PCC, Precuneus",Pcun_R_4_4,"A31, area 31 (Lc1)",Pcun_R_4_4
+155,Postcentral Gyrus,PoG_L_4_1,"A1/2/3ulhf, area 1/2/3(upper limb, head and face region)",PoG_L_4_1
+156,Postcentral Gyrus,PoG_R_4_1,"A1/2/3ulhf, area 1/2/3(upper limb, head and face region)",PoG_R_4_1
+157,Postcentral Gyrus,PoG_L_4_2,"A1/2/3tonIa, area 1/2/3(tongue and larynx region)",PoG_L_4_2
+158,Postcentral Gyrus,PoG_R_4_2,"A1/2/3tonIa, area 1/2/3(tongue and larynx region)",PoG_R_4_2
+159,Postcentral Gyrus,PoG_L_4_3,"A2, area 2",PoG_L_4_3
+160,Postcentral Gyrus,PoG_R_4_3,"A2, area 2",PoG_R_4_3
+161,Postcentral Gyrus,PoG_L_4_4,"A1/2/3tru, area1/2/3(trunk region)",PoG_L_4_4
+162,Postcentral Gyrus,PoG_R_4_4,"A1/2/3tru, area1/2/3(trunk region)",PoG_R_4_4
+163,Prefrontal Cortex,INS_L_6_1,"G, hypergranular insular",INS_L_6_1
+164,Prefrontal Cortex,INS_R_6_1,"G, hypergranular insular",INS_R_6_1
+165,Prefrontal Cortex,INS_L_6_2,"vIa, ventral agranular insular",INS_L_6_2
+166,Prefrontal Cortex,INS_R_6_2,"vIa, ventral agranular insular",INS_R_6_2
+167,Prefrontal Cortex,INS_L_6_3,"dIa, dorsal agranular insular",INS_L_6_3
+168,Prefrontal Cortex,INS_R_6_3,"dIa, dorsal agranular insular",INS_R_6_3
+169,Prefrontal Cortex,INS_L_6_4,"vId/vIg, ventral granular insular",INS_L_6_4
+170,Prefrontal Cortex,INS_R_6_4,"vId/vIg, ventral granular insular",INS_R_6_4
+171,Prefrontal Cortex,INS_L_6_5,"dIg, dorsal granular insular",INS_L_6_5
+172,Prefrontal Cortex,INS_R_6_5,"dIg, dorsal granular insular",INS_R_6_5
+173,Prefrontal Cortex,INS_L_6_6,"dId, dorsal dysgranular insular",INS_L_6_6
+174,Prefrontal Cortex,INS_R_6_6,"dId, dorsal dysgranular insular",INS_R_6_6
+175,Cingulate Gyrus,CG_L_7_1,"A23d, dorsal area 23",CG_L_7_1
+176,Cingulate Gyrus,CG_R_7_1,"A23d, dorsal area 23",CG_R_7_1
+177,Cingulate Gyrus,CG_L_7_2,"A24rv, rostroventral area 24",CG_L_7_2
+178,Cingulate Gyrus,CG_R_7_2,"A24rv, rostroventral area 24",CG_R_7_2
+179,Cingulate Gyrus,CG_L_7_3,"A32p, pregenual area 32",CG_L_7_3
+180,Cingulate Gyrus,CG_R_7_3,"A32p, pregenual area 32",CG_R_7_3
+181,Cingulate Gyrus,CG_L_7_4,"A23v, ventral area 23",CG_L_7_4
+182,Cingulate Gyrus,CG_R_7_4,"A23v, ventral area 23",CG_R_7_4
+183,Cingulate Gyrus,CG_L_7_5,"A24cd, caudodorsal area 24",CG_L_7_5
+184,Cingulate Gyrus,CG_R_7_5,"A24cd, caudodorsal area 24",CG_R_7_5
+185,Cingulate Gyrus,CG_L_7_6,"A23c, caudal area 24",CG_L_7_6
+186,Cingulate Gyrus,CG_R_7_6,"A23c, caudal area 24",CG_R_7_6
+187,Cingulate Gyrus,CG_L_7_7,"A32sg, subgenual area 32",CG_L_7_7
+188,Cingulate Gyrus,CG_R_7_7,"A32sg, subgenual area 32",CG_R_7_7
+189,"PCC, Precuneus",Cun_L_5_1,"cLinG, caudal lingual gyrus",Cun_L_5_1
+190,"PCC, Precuneus",Cun_R_5_1,"cLinG, caudal lingual gyrus",Cun_R_5_1
+191,"PCC, Precuneus",Cun_L_5_2,"rCunG, rostral cuneus gyrus",Cun_L_5_2
+192,"PCC, Precuneus",Cun_R_5_2,"rCunG, rostral cuneus gyrus",Cun_R_5_2
+193,"PCC, Precuneus",Cun_L_5_3,"cCunG, caudal cuneus gyrus",Cun_L_5_3
+194,"PCC, Precuneus",Cun_R_5_3,"cCunG, caudal cuneus gyrus",Cun_R_5_3
+195,"PCC, Precuneus",Cun_L_5_4,"rLinG, rostral lingual gyrus",Cun_L_5_4
+196,"PCC, Precuneus",Cun_R_5_4,"rLinG, rostral lingual gyrus",Cun_R_5_4
+197,"PCC, Precuneus",Cun_L_5_5,"vmPOS,ventomeial parietooccipital sulcus",Cun_L_5_5
+198,"PCC, Precuneus",Cun_R_5_5,"vmPOS,ventomeial parietooccipital sulcus",Cun_R_5_5
+199,Occipital Gyrus,OcG_L_4_1,"mOccG, middle occipital gyrus",OcG_L_4_1
+200,Occipital Gyrus,OcG_R_4_1,"mOccG, middle occipital gyrus",OcG_R_4_1
+201,Occipital Gyrus,OcG_L_4_2,"V5/MT, area V5/MT",OcG_L_4_2
+202,Occipital Gyrus,OcG_R_4_2,"V5/MT, area V5/MT",OcG_R_4_2
+203,Occipital Gyrus,OcG_L_4_3,"OPC, occipital polar cortex",OcG_L_4_3
+204,Occipital Gyrus,OcG_R_4_3,"OPC, occipital polar cortex",OcG_R_4_3
+205,Occipital Gyrus,OcG_L_4_4,"iOccG, inferior occipital gyrus",OcG_L_4_4
+206,Occipital Gyrus,OcG_R_4_4,"iOccG, inferior occipital gyrus",OcG_R_4_4
+207,Occipital Gyrus,sOcG_L_2_1,"msOccG, medial superior occipital gyrus",sOcG_L_2_1
+208,Occipital Gyrus,sOcG_R_2_1,"msOccG, medial superior occipital gyrus",sOcG_R_2_1
+209,Occipital Gyrus,sOcG_L_2_2,"lsOccG, lateral superior occipital gyrus",sOcG_L_2_2
+210,Occipital Gyrus,sOcG_R_2_2,"lsOccG, lateral superior occipital gyrus",sOcG_R_2_2
+211,Middle Temporal Gyrus,Amyg_L_2_1,"mAmyg, medial amyg",Amyg_L_2_1
+212,Middle Temporal Gyrus,Amyg_R_2_1,"mAmyg, medial amyg",Amyg_R_2_1
+213,Middle Temporal Gyrus,Amyg_L_2_2,"lAmyg, lateral amyg",Amyg_L_2_2
+214,Middle Temporal Gyrus,Amyg_R_2_2,"lAmyg, lateral amyg",Amyg_R_2_2
+215,Middle Temporal Gyrus,Hipp_L_2_1,"rHipp, rostral hipp",Hipp_L_2_1
+216,Middle Temporal Gyrus,Hipp_R_2_1,"rHipp, rostral hipp",Hipp_R_2_1
+217,Middle Temporal Gyrus,Hipp_L_2_2,"cHipp, caudal hipp",Hipp_L_2_2
+218,Middle Temporal Gyrus,Hipp_R_2_2,"cHipp, caudal hipp",Hipp_R_2_2
+219,Striatum,Str_L_6_1,"vCa, ventral caudate",Str_L_6_1
+220,Striatum,Str_R_6_1,"vCa, ventral caudate",Str_R_6_1
+221,Striatum,Str_L_6_2,"GP, globus pallidus",Str_L_6_2
+222,Striatum,Str_R_6_2,"GP, globus pallidus",Str_R_6_2
+223,Striatum,Str_L_6_3,"NAC, nucleus accumbens",Str_L_6_3
+224,Striatum,Str_R_6_3,"NAC, nucleus accumbens",Str_R_6_3
+225,Striatum,Str_L_6_4,"vmPu, ventromedial putamen",Str_L_6_4
+226,Striatum,Str_R_6_4,"vmPu, ventromedial putamen",Str_R_6_4
+227,Striatum,Str_L_6_5,"dCa, dorsal caudate",Str_L_6_5
+228,Striatum,Str_R_6_5,"dCa, dorsal caudate",Str_R_6_5
+229,Striatum,Str_L_6_6,"dlPu, dorsolateral putamen",Str_L_6_6
+230,Striatum,Str_R_6_6,"dlPu, dorsolateral putamen",Str_R_6_6
+231,Thalamus,Tha_L_8_1,"mPFtha, medial Pre-frontal thalamus",Tha_L_8_1
+232,Thalamus,Tha_R_8_1,"mPFtha, medial Pre-frontal thalamus",Tha_R_8_1
+233,Thalamus,Tha_L_8_2,"mPMtha, pre-motor thalamus",Tha_L_8_2
+234,Thalamus,Tha_R_8_2,"mPMtha, pre-motor thalamus",Tha_R_8_2
+235,Thalamus,Tha_L_8_3,"Stha, sensory thalamus",Tha_L_8_3
+236,Thalamus,Tha_R_8_3,"Stha, sensory thalamus",Tha_R_8_3
+237,Thalamus,Tha_L_8_4,"rTtha, rostral Temporal thalamus",Tha_L_8_4
+238,Thalamus,Tha_R_8_4,"rTtha, rostral Temporal thalamus",Tha_R_8_4
+239,Thalamus,Tha_L_8_5,"PPtha, posterior parietal thalamus",Tha_L_8_5
+240,Thalamus,Tha_R_8_5,"PPtha, posterior parietal thalamus",Tha_R_8_5
+241,Thalamus,Tha_L_8_6,"Otha, occipital thalamus",Tha_L_8_6
+242,Thalamus,Tha_R_8_6,"Otha, occipital thalamus",Tha_R_8_6
+243,Thalamus,Tha_L_8_7,"cTtha, caudal Temporal thalamus",Tha_L_8_7
+244,Thalamus,Tha_R_8_7,"cTtha, caudal Temporal thalamus",Tha_R_8_7
+245,Thalamus,Tha_L_8_8,"lPFtha, lateral Pre-frontal thalamus",Tha_L_8_8
+246,Thalamus,Tha_R_8_8,"lPFtha, lateral Pre-frontal thalamus",Tha_R_8_8

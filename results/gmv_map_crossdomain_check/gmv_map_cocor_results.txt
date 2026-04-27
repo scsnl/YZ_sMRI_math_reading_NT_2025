@@ -1,0 +1,70 @@
+====================================================
+Comparison 1: CMI_math-Stanford_math vs CMI_math-CMI_reading
+====================================================
+
+  Results of a comparison of two overlapping correlations based on dependent groups
+
+Comparison between r.jk = 0.5232 and r.jh = 0.6888
+Difference: r.jk - r.jh = -0.1655
+Related correlation: r.kh = 0.3878
+Group size: n = 218
+Null hypothesis: r.jk is equal to r.jh
+Alternative hypothesis: r.jk is not equal to r.jh (two-sided)
+Alpha: 0.05
+
+pearson1898: Pearson and Filon's z (1898)
+  z = -3.0431, p-value = 0.0023
+  Null hypothesis rejected
+
+hotelling1940: Hotelling's t (1940)
+  t = -3.2754, df = 215, p-value = 0.0012
+  Null hypothesis rejected
+
+williams1959: Williams' t (1959)
+  t = -3.1095, df = 215, p-value = 0.0021
+  Null hypothesis rejected
+
+steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
+  z = -3.0779, p-value = 0.0021
+  Null hypothesis rejected
+
+zou2007: Zou's (2007) confidence interval
+  95% confidence interval for r.jk - r.jh: -0.2755 -0.0598
+  Null hypothesis rejected (Interval does not include 0)
+
+
+
+====================================================
+Comparison 2: CMI_reading-Stanford_read vs CMI_reading-CMI_math
+====================================================
+
+  Results of a comparison of two overlapping correlations based on dependent groups
+
+Comparison between r.jk = 0.2679 and r.jh = 0.6888
+Difference: r.jk - r.jh = -0.4209
+Related correlation: r.kh = 0.2963
+Group size: n = 218
+Null hypothesis: r.jk is equal to r.jh
+Alternative hypothesis: r.jk is not equal to r.jh (two-sided)
+Alpha: 0.05
+
+pearson1898: Pearson and Filon's z (1898)
+  z = -6.4218, p-value = 0.0000
+  Null hypothesis rejected
+
+hotelling1940: Hotelling's t (1940)
+  t = -7.2062, df = 215, p-value = 0.0000
+  Null hypothesis rejected
+
+williams1959: Williams' t (1959)
+  t = -6.9243, df = 215, p-value = 0.0000
+  Null hypothesis rejected
+
+steiger1980: Steiger's (1980) modification of Dunn and Clark's z (1969) using average correlations
+  z = -6.5494, p-value = 0.0000
+  Null hypothesis rejected
+
+zou2007: Zou's (2007) confidence interval
+  95% confidence interval for r.jk - r.jh: -0.5516 -0.2932
+  Null hypothesis rejected (Interval does not include 0)
+

@@ -1,0 +1,5 @@
+"","CMI_math","CMI_reading","Stanford_math","Stanford_read"
+"CMI_math",NA,0,0,8.58029905437263e-06
+"CMI_reading",0,NA,3.08677527982582e-09,6.18657577340365e-05
+"Stanford_math",0,3.08677527982582e-09,NA,0
+"Stanford_read",8.58029905437263e-06,6.18657577340365e-05,0,NA

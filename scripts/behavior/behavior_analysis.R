@@ -25,7 +25,7 @@ rm(list = ls())
 # ------------------------------------------------------------------
 
 # Load behavioral data for CMI cohort (n = 760)
-beh_cmi <- read.csv('data/subjectlist/subjectlist_cmi_n760.csv')
+beh_cmi <- read.csv('data/subjectlist/subjectlist_cmi_n760_with_site_tbv_wm.csv')
 
 # ------------------------------------------------------------------
 # 3. Correlation Analysis (CMI Cohort)
@@ -43,12 +43,30 @@ cor.test(beh_cmi$age, beh_cmi$mathprob_std)
 cor.test(beh_cmi$age, beh_cmi$wordread_std)
 cor.test(beh_cmi$age, beh_cmi$readcomp_std)
 
+# Correlations between math and reading
+cor.test(beh_cmi$numop_std, beh_cmi$wordread_std)
+cor.test(beh_cmi$numop_std, beh_cmi$readcomp_std)
+cor.test(beh_cmi$mathprob_std, beh_cmi$wordread_std)
+cor.test(beh_cmi$mathprob_std, beh_cmi$readcomp_std)
+
+# Correlations with IQ
+cor.test(beh_cmi$numop_std, beh_cmi$WISC_FSIQ)
+cor.test(beh_cmi$mathprob_std, beh_cmi$WISC_FSIQ)
+cor.test(beh_cmi$wordread_std, beh_cmi$WISC_FSIQ)
+cor.test(beh_cmi$readcomp_std, beh_cmi$WISC_FSIQ)
+
+# correlations with WM
+cor.test(beh_cmi$numop_std, beh_cmi$WISC_WMI)
+cor.test(beh_cmi$mathprob_std, beh_cmi$WISC_WMI)
+cor.test(beh_cmi$wordread_std, beh_cmi$WISC_WMI)
+cor.test(beh_cmi$readcomp_std, beh_cmi$WISC_WMI)
+
 # ------------------------------------------------------------------
 # 4. Correlation Analysis (Stanford Cohort)
 # ------------------------------------------------------------------
 
 # Load behavioral data for Stanford cohort (n = 231)
-beh_su <- read.csv("data/subjectlist/subjectlist_stanford_n231.csv")
+beh_su <- read.csv("data/subjectlist/subjectlist_stanford_n231_with_tbv_wm.csv")
 
 # Compute correlations between math, reading, and age
 cor.test(beh_su$numop_std, beh_su$wordread_std)
@@ -61,6 +79,24 @@ cor.test(beh_su$age, beh_su$numop_std)
 cor.test(beh_su$age, beh_su$mathrea_std)
 cor.test(beh_su$age, beh_su$wordread_std)
 cor.test(beh_su$age, beh_su$readcomp_std)
+
+# Correlations between math and reading
+cor.test(beh_su$numop_std, beh_su$wordread_std)
+cor.test(beh_su$numop_std, beh_su$readcomp_std)
+cor.test(beh_su$mathrea_std, beh_su$wordread_std)
+cor.test(beh_su$mathrea_std, beh_su$readcomp_std)
+
+# Correlations with IQ
+cor.test(beh_su$numop_std, beh_su$fsiq)
+cor.test(beh_su$mathrea_std, beh_su$fsiq)
+cor.test(beh_su$wordread_std, beh_su$fsiq)
+cor.test(beh_su$readcomp_std, beh_su$fsiq)
+
+# Correlations with WM
+cor.test(beh_su$numop_std, beh_su$Backward_digit_recall_std)
+cor.test(beh_su$mathrea_std, beh_su$Backward_digit_recall_std)
+cor.test(beh_su$wordread_std, beh_su$Backward_digit_recall_std)
+cor.test(beh_su$readcomp_std, beh_su$Backward_digit_recall_std)
 
 # ------------------------------------------------------------------
 # 5. Group Differences (CMI vs. Stanford)

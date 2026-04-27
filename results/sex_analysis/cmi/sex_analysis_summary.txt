@@ -1,0 +1,23 @@
+Dataset: CMI 
+
+=== GMV weight map correlations ===
+             analysis var1   var2         r             p
+1    Math_GMV_Weights Full   Male 0.9911458 2.155018e-191
+2    Math_GMV_Weights Full Female 0.9714849 5.401285e-137
+3    Math_GMV_Weights Male Female 0.9413352 7.242286e-104
+4 Reading_GMV_Weights Full   Male 0.9784210 6.627007e-150
+5 Reading_GMV_Weights Full Female 0.9390103 4.242407e-102
+6 Reading_GMV_Weights Male Female 0.8628930  6.029992e-66
+
+=== Canonical correlations by sex ===
+  analysis    sex   n         r            p
+1     Math   Male 481 0.2241714 6.798810e-07
+2     Math Female 270 0.2229721 2.212661e-04
+3  Reading   Male 481 0.2279923 4.327315e-07
+4  Reading Female 270 0.1863172 2.110223e-03
+
+=== Sex differences in canonical correlations (Fisher z test) ===
+  analysis    r_male n_male  r_female n_female          z         p
+1     Math 0.2241714    481 0.2229721      270 0.01652401 0.9868163
+2  Reading 0.2279923    481 0.1863172      270 0.57002507 0.5686607
+

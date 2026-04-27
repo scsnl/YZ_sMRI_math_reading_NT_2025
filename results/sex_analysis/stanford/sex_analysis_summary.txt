@@ -1,0 +1,23 @@
+Dataset: Stanford 
+
+=== GMV weight map correlations ===
+             analysis var1   var2         r             p
+1    Math_GMV_Weights Full   Male 0.9777353 1.873703e-148
+2    Math_GMV_Weights Full Female 0.9372424 8.432193e-101
+3    Math_GMV_Weights Male Female 0.8614890  1.673056e-65
+4 Reading_GMV_Weights Full   Male 0.9648988 2.114204e-127
+5 Reading_GMV_Weights Full Female 0.9143548  9.184594e-87
+6 Reading_GMV_Weights Male Female 0.7812719  4.253051e-46
+
+=== Canonical correlations by sex ===
+  analysis    sex   n         r            p
+1     Math   Male 130 0.3157040 2.533541e-04
+2     Math Female  98 0.3230348 1.177424e-03
+3  Reading   Male 130 0.4085176 1.399595e-06
+4  Reading Female  98 0.3014295 2.559671e-03
+
+=== Sex differences in canonical correlations (Fisher z test) ===
+  analysis    r_male n_male  r_female n_female           z         p
+1     Math 0.3157040    130 0.3230348       98 -0.06018126 0.9520113
+2  Reading 0.4085176    130 0.3014295       98  0.90483819 0.3655511
+
