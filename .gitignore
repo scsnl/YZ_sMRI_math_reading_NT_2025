@@ -14,3 +14,10 @@ __pycache__/
 
 .Rhistory
 
+
+.Rhistory
+.RData
+.DS_Store
+.idea/
+__pycache__/
+*.pyc
