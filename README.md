@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Glutamatergic signaling underlies brain structural organization for mathematical and reading abilities: A multicohort replication
+=======
+# Glutamatergic signaling underlies brain organization for mathematical and reading abilities: A multicohort replication
+>>>>>>> 240f747 (update for revision)
 
 © 2025 by The Board of Trustees of the Leland Stanford Junior University is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
@@ -8,14 +12,14 @@ For commercial license inquiries, contact the [Stanford Office of Technology Lic
 
 ## Study Overview
 
-Proficiency in mathematics and reading is essential for cognitive functioning and predicts professional success, yet the molecular bases of individual differences in these abilities remain poorly understood.
+The neurochemical mechanisms underlying individual differences in children's mathematical and reading abilities remain largely unknown. 
+Here we investigate how neurotransmitter systems relate to brain structural organization supporting these abilities in two independent cohorts of children. 
 
-In this study, we examine how multiple neurotransmitter systems relate to brain organization supporting mathematical and reading abilities in children, with two key components:
-
+Two key components:
 1. **Brain Structural Phenotypes:** We derived whole-brain structural phenotypes associated with mathematical and reading abilities using structural MRI and Canonical Correlation Analysis (CCA).
-2. **Neurotransmitter Mapping:** We mapped these phenotypes onto the spatial distribution of neurotransmitter systems derived from PET data to identify which molecular systems are most strongly related to brain organization.
+2. **Neurotransmitter Mapping:** We mapped the spatial expression of these phenotypes onto the spatial distribution of neurotransmitter systems derived from PET data to identify which molecular systems are most strongly related to math- and reading-related brain structural organization.
 
-We employed a **discovery-validation framework** using two independent cohorts (ages 7–14):
+We employed a **discovery-validation framework** using two independent cohorts (ages 7–14 years):
 - **CMI-HBN discovery cohort (N = 760):** One of the largest neuroimaging studies of math and reading abilities.
 - **Stanford validation cohort (N = 231):** Independent replication dataset.
 
@@ -49,16 +53,30 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │
 ├── scripts/
 │   ├── age_analysis/
+<<<<<<< HEAD
+=======
+│   ├── sex_analysis/
+>>>>>>> 240f747 (update for revision)
 │   ├── behavior/
 │   ├── BF/
 │   ├── cca/
 │   │   ├── full_sample/
 │   │   ├── prediction/
 │   │   ├── visualization/
+<<<<<<< HEAD
 │   │   └── table_top20.R
 │   ├── control_analysis/
 │   │   ├── cmi/
 │   │   └── stanford/
+=======
+│   │   ├── table_top20.R
+│   │   ├── compare_gmv_weight_map_across_domains_cohorts.R
+│   │   └── compare_gmv_weight_maps_across_models.R
+│   ├── control_analysis/
+│   │   ├── cmi/
+│   │   ├── stanford/
+│   │   └── partial_correlation.R
+>>>>>>> 240f747 (update for revision)
 │   ├── network_analysis/
 │   ├── neurotransmitter/
 │   ├── shirer_to_bn/
@@ -67,19 +85,33 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │
 ├── results/
 │   ├── age_analysis/
+<<<<<<< HEAD
 │   ├── cca/
 │   │   ├── cmi/
 │   │   └── stanford/
+=======
+│   ├── sex_analysis/
+│   ├── cca/
+│   │   ├── cmi/
+│   │   ├── stanford/
+│   │   ├── prediction/
+│   │   ├── partial_corr/
+│   │   └── brainmaps/
+>>>>>>> 240f747 (update for revision)
 │   ├── network_analysis/
 │   └── neurotransmitter/
 │
 └── README.md
 ```
 
+<<<<<<< HEAD
 ---
 
 **Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier. After downloading the repository, users need to update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts so that they point to the local path of the repository in the user’s environment. Once these repository-level paths are updated, the scripts, including interanll called scripts (e.g., myRfunc.R), should run smoothly.
 
+=======
+**Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier. After downloading the repository, users need to update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts so that they point to the local path of the repository in the user’s environment. Once these repository-level paths are updated, the scripts, including interanll called scripts (e.g., myRfunc.R), should run smoothly.
+>>>>>>> 240f747 (update for revision)
 
 ---
 
@@ -115,18 +147,27 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 
 ### 2. Canonical Correlation Analysis (CCA)
 - **CMI-HBN:**  
-  - `scripts/cca/full_sample/Wholebrain_CCA_cmi.R`  
-  - Results: `results/cca/cmi/wholebrain_cca_cmi_math/`, `results/cca/cmi/wholebrain_cca_cmi_reading/`
+  - Separate models: `scripts/cca/full_sample/Wholebrain_CCA_cmi.R`  
+  - Seprate models' results: `results/cca/cmi/wholebrain_cca_cmi_math/`, `results/cca/cmi/wholebrain_cca_cmi_reading/`
+  - Joint model: `scripts/cca/full_sample/Wholebrain_CCA_cmi_joint.R`  
+  - Joint model's results: `results/cca/cmi/wholebrain_cca_cmi_math_reading_combined/`
+  
 - **Stanford:**  
-  - `scripts/cca/full_sample/Wholebrain_CCA_stanford.R`  
-  - Results: `results/cca/stanford/wholebrain_cca_stanford_math/`, `results/cca/stanford/wholebrain_cca_stanford_reading/`
+  - Separate models: `scripts/cca/full_sample/Wholebrain_CCA_stanford.R`  
+  - Seprate models' results: `results/cca/stanford/wholebrain_cca_stanford_math/`, `results/cca/stanford/wholebrain_cca_stanford_reading/`
+  - Joint model: `scripts/cca/full_sample/Wholebrain_CCA_stanford_joint.R`  
+  - Joint model's results: `results/cca/cmi/wholebrain_cca_stanford_math_reading_combined/`
+
 - **Visualization:**  
-  - Convert GMV weights to NIfTI: `scripts/cca/visualization/BN2brainmap_cca_SignChanged.m`
+  - Convert GMV weights to NIfTI: seperate models `scripts/cca/visualization/BN2brainmap_cca_SignChanged.m`, joint model `scripts/cca/visualization/BN2brainmap_cca_SignChanged_joint.m`
   - BrainNet Viewer for visualization.
 - **Top 20% ROI Table:**  
   - `scripts/shirer_to_bn/map_shirer_to_brainnetome.m`  
   - `scripts/cca/table_top20.R`
-
+- **Compare GMV weight maps:**  
+  - across models: `scripts/cca/compare_gmv_weight_maps_across_models.m`  
+  - across domains and cohorts: `scripts/cca/compare_gmv_weight_map_across_domains_cohorts.m`  
+  
 ### 3. Prediction Analysis
 - **Script:** `scripts/cca/prediction/prediction_cmi_model_to_stanford.R`
 - **Scatter plot:** `scripts/cca/prediction/prediction_scatter_plot.R`
@@ -135,42 +176,55 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 - **Script:** `scripts/age_analysis/ageAnalysis_with_plots.R`
 - **Output:** GMV weights CSVs (full sample + 3 age bins).
 
+### 5. Sex-Stratified Analysis
+- **Script:** `scripts/sex_analysis/sexAnalysis_with_plots.R`
+- **Output:** GMV weights CSVs (full sample + female/male).
+
 ### 5. Neurotransmitter Analysis
 - **PET parcellation:** `scripts/neurotransmitter/parcellate.py`
 - **Receptor matrix:** `scripts/neurotransmitter/make_receptor_matrix.py`
 - **Spin test:** `scripts/spin/Calculating_Distancematrix_BN.m`
-- **Regression:** `scripts/neurotransmitter/brainbeh_receptors_analysis.py`  
+- **Regression:** 
+  - separate models: `scripts/neurotransmitter/brainbeh_receptors_analysis.py`  
+  - joint model: `scripts/neurotransmitter/brainbeh_receptors_analysis_joint.py`  
   (with `scripts/neurotransmitter/utility.py`)
+<<<<<<< HEAD
 - **FDR correction:** `scripts/neurotransmitter/add_fdrp.R`
+=======
+- **FDR correction:** `scripts/add_fdrp.R`, `scripts/add_fdrp_joint.R`
+>>>>>>> 240f747 (update for revision)
 - **Bayes Factor:**  
-  - CMI-HBN: `scripts/BF/getBF_neurotransmitter.R`
-  - Replication BF: `scripts/BF/getBFr_neurotransmitter.R`
-- **Visualization:** `scripts/neurotransmitter/simple_barplot_individual_receptors.R`
+  - CMI-HBN: `scripts/BF/getBF_neurotransmitter.R`, `scripts/BF/getBF_neurotransmitter_joint.R`
+  - Replication BF: `scripts/BF/getBFr_neurotransmitter.R`, `scripts/BF/getBFr_neurotransmitter_joint.R`
+- **Visualization:** `scripts/neurotransmitter/simple_barplot_individual_receptors.R`, `scripts/neurotransmitter/simple_barplot_individual_receptors_joint.R`
 
 ### 6. Network Analysis
 - `scripts/network_analysis/scatter_plot_directionality.R`
 - `scripts/network_analysis/scatter_plot_directionality_network_shirer.R`
 
-### 7. Control Analyses (IQ & SES)
+### 7. Control Analyses (IQ, SES, Site, TBV)
 - **CMI-HBN:**  
   - IQ-controlled: `scripts/control_analysis/cmi/Wholebrain_CCA_cmi_ctrIQ.R`
   - SES-controlled: `scripts/control_analysis/cmi/Wholebrain_CCA_cmi_ctrSES.R`
+  - Site-controlled: `scripts/control_analysis/cmi/Wholebrain_CCA_cmi_ctrSITE.R`
+  - TVB-controlled: `scripts/control_analysis/partial_correlation.R`
   - Compare models: `scripts/control_analysis/cmi/check_weights_correlation.R`
 - **Stanford:**  
   - IQ-controlled: `scripts/control_analysis/stanford/Wholebrain_CCA_stanford_ctrIQ.R`
   - SES-controlled: `scripts/control_analysis/stanford/controlAnalysis_SES_stanford.R`
+  - TVB-controlled: `scripts/control_analysis/partial_correlation.R`
   - Compare models: `scripts/control_analysis/stanford/check_weights_correlation.R`
-
 ---
 
 ## How to Run
 1. Clone this repository and ensure required R and Python dependencies are installed.
-2. Prepare input data in `data/`.
-3. Run behavioral and CCA scripts (`scripts/behavior`, `scripts/cca/full_sample`).
-4. Use prediction and age-stratified scripts for cross-validation.
-5. Execute neurotransmitter and network analyses.
-6. Visualize results using the provided R and MATLAB scripts.
-7. All scripts include **detailed comments** to assist replication and adaptation.
+2. Update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts
+3. Prepare input data in `data/`.
+4. Run behavioral and CCA scripts (e.g., `scripts/behavior`, `scripts/cca/full_sample`).
+5. Use prediction, age-stratified, sex-stratified scripts for cross-validation.
+6. Execute neurotransmitter and network analyses.
+7. Visualize results using the provided R and MATLAB scripts.
+8. All scripts include **detailed comments** to assist replication and adaptation.
 
 ---
 
