@@ -49,22 +49,17 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │
 ├── scripts/
 │   ├── age_analysis/
-<<<<<<< HEAD
-=======
 │   ├── sex_analysis/
->>>>>>> 240f747 (update for revision)
 │   ├── behavior/
 │   ├── BF/
 │   ├── cca/
 │   │   ├── full_sample/
 │   │   ├── prediction/
 │   │   ├── visualization/
-<<<<<<< HEAD
 │   │   └── table_top20.R
 │   ├── control_analysis/
 │   │   ├── cmi/
 │   │   └── stanford/
-=======
 │   │   ├── table_top20.R
 │   │   ├── compare_gmv_weight_map_across_domains_cohorts.R
 │   │   └── compare_gmv_weight_maps_across_models.R
@@ -72,7 +67,6 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │   │   ├── cmi/
 │   │   ├── stanford/
 │   │   └── partial_correlation.R
->>>>>>> 240f747 (update for revision)
 │   ├── network_analysis/
 │   ├── neurotransmitter/
 │   ├── shirer_to_bn/
@@ -81,11 +75,9 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │
 ├── results/
 │   ├── age_analysis/
-<<<<<<< HEAD
 │   ├── cca/
 │   │   ├── cmi/
 │   │   └── stanford/
-=======
 │   ├── sex_analysis/
 │   ├── cca/
 │   │   ├── cmi/
@@ -93,21 +85,13 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
 │   │   ├── prediction/
 │   │   ├── partial_corr/
 │   │   └── brainmaps/
->>>>>>> 240f747 (update for revision)
 │   ├── network_analysis/
 │   └── neurotransmitter/
 │
 └── README.md
 ```
 
-<<<<<<< HEAD
----
-
 **Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier. After downloading the repository, users need to update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts so that they point to the local path of the repository in the user’s environment. Once these repository-level paths are updated, the scripts, including interanll called scripts (e.g., myRfunc.R), should run smoothly.
-
-=======
-**Note:** All scripts are thoroughly commented to guide users through each analysis step and make replication easier. After downloading the repository, users need to update the working directory in the R scripts (e.g., setwd) and the project directory in the Python scripts so that they point to the local path of the repository in the user’s environment. Once these repository-level paths are updated, the scripts, including interanll called scripts (e.g., myRfunc.R), should run smoothly.
->>>>>>> 240f747 (update for revision)
 
 ---
 
@@ -184,11 +168,7 @@ By analyzing both **mathematical** and **reading** abilities in the same partici
   - separate models: `scripts/neurotransmitter/brainbeh_receptors_analysis.py`  
   - joint model: `scripts/neurotransmitter/brainbeh_receptors_analysis_joint.py`  
   (with `scripts/neurotransmitter/utility.py`)
-<<<<<<< HEAD
-- **FDR correction:** `scripts/neurotransmitter/add_fdrp.R`
-=======
 - **FDR correction:** `scripts/add_fdrp.R`, `scripts/add_fdrp_joint.R`
->>>>>>> 240f747 (update for revision)
 - **Bayes Factor:**  
   - CMI-HBN: `scripts/BF/getBF_neurotransmitter.R`, `scripts/BF/getBF_neurotransmitter_joint.R`
   - Replication BF: `scripts/BF/getBFr_neurotransmitter.R`, `scripts/BF/getBFr_neurotransmitter_joint.R`
