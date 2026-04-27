@@ -1,3 +1,16 @@
 
 .RData
 .Rhistory
+
+.DS_Store
+
+.idea/
+
+__pycache__/
+
+*.pyc
+
+.RData
+
+.Rhistory
+
