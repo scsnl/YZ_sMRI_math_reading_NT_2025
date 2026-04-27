@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Glutamatergic signaling underlies brain structural organization for mathematical and reading abilities: A multicohort replication
 
 
