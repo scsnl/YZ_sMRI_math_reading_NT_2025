@@ -141,16 +141,21 @@ mycca_noscale <- function(X,Y,nperm){
   perm.idx = shuffleSet(n,nperm) # a row = a permutation including n (number of observations) indices
   
   # permutation test for pillai (model fit)
-  pillai.p.perm = c()
+  Pillai.perm <- numeric(nperm)
+  F.Pillai.perm <- numeric(nperm)
+
   for(perm in c(1:nperm)){
     idx = perm.idx[perm,]
     S12.per <- cov(Y[idx,], X)
     gross.mat.per <- S12.per %*% S22.inv %*% t(S12.per) %*% S11.inv
     Pillai.per <- sum(diag(gross.mat.per))
     Fper  <- (Pillai.per*df2)/((s-Pillai.per)*df1)
-    pillai.p.perm = c(pillai.p.perm, Fper >= (Fref-epsilon))  
+    
+    Pillai.perm[perm] <- Pillai.per
+    F.Pillai.perm[perm] <- Fper  
   }
-  pillai.p.perm = (sum(pillai.p.perm)+1)/(nperm + 1)
+  pillai.p.perm <- (sum(F.Pillai.perm >= (Fref - epsilon)) + 1) / (nperm + 1)
+  
   
   # permutation test for canonical correlation (with CCA rerun)
   r.actual = diag(cor(Cx,Cy))
@@ -165,15 +170,20 @@ mycca_noscale <- function(X,Y,nperm){
   }
   
   df.ractual = do.call("rbind", replicate(nperm, t(r.actual), simplify = FALSE))
-  r.perm = df.rrand > df.ractual
-  cancor.p.perm = colSums(r.perm) / dim(r.perm)[1]
-  cancor.p.perm.adjust = p.adjust(cancor.p.perm,method="fdr",n=length(r.actual))
+  # r.perm = df.rrand > df.ractual
+  # cancor.p.perm = colSums(r.perm) / dim(r.perm)[1]
+  # cancor.p.perm.adjust = p.adjust(cancor.p.perm,method="fdr",n=length(r.actual))
+  
+  r.perm = df.rrand >= df.ractual
+  cancor.p.perm = (colSums(r.perm) + 1) / (dim(r.perm)[1] + 1)
+  cancor.p.perm.adjust = p.adjust(cancor.p.perm, method = "fdr", n = length(r.actual))
   
   # output
   out = list(Pillai=PillaiTrace, Eigenvalues=Eigenvalues, cancor=K.svd$d,
              xcoef.raw = B, ycoef.raw = A,
              xcoef.std = Bstd, ycoef.std = Astd,
              pillai.p = p.Pillai, pillai.p.perm = pillai.p.perm, 
+             Pillai.perm = Pillai.perm, F.Pillai.perm = F.Pillai.perm,
              Cy=Cy, Cx=Cx,
              corr.Y.Cy=corr.Y.Cy, corr.X.Cx=corr.X.Cx, 
              corr.Y.Cx=corr.Y.Cx, corr.X.Cy=corr.X.Cy,

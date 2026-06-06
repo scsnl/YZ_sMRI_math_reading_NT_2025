@@ -120,6 +120,14 @@ analyze_age <- function(math_path, math_file, read_path, read_file, output_dir, 
     cor_matrix <- stats$r
     colnames(cor_matrix) <- rownames(cor_matrix) <- colnames(df)
     
+    # Save source data for the plotted correlation matrix
+    source_data_file <- sub("\\.eps$", "_source_data_correlation_matrix.csv", output_file)
+    write.csv(cor_matrix, file = source_data_file, row.names = TRUE)
+    
+    # also save p-value matrix, if useful for checking
+    pval_file <- sub("\\.eps$", "_source_data_pvalue_matrix.csv", output_file)
+    write.csv(stats$P, file = pval_file, row.names = TRUE)
+    
     # Custom color palette
     my_col <- colorRampPalette(c("orange", "tomato"))(200)
     

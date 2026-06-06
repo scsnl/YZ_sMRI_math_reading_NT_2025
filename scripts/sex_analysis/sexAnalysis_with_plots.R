@@ -101,6 +101,17 @@ plot_corr <- function(df, output_file) {
   cor_matrix <- stats$r
   colnames(cor_matrix) <- rownames(cor_matrix) <- colnames(df)
   
+  # ------------------------------------------------------------
+  # Save source data used to generate the correlation matrix plot
+  # ------------------------------------------------------------
+  # 1) ROI-level GMV loading values used to compute the matrix
+  source_input_file <- sub("\\.eps$", "_source_data_input_gmv_loadings.csv", output_file)
+  write.csv(df, file = source_input_file,row.names = FALSE)
+
+  # 2) Pearson correlation matrix shown in the plot
+  source_cor_file <- sub("\\.eps$", "_source_data_correlation_matrix.csv", output_file)
+  write.csv(cor_matrix, file = source_cor_file, row.names = TRUE)
+  
   my_col <- colorRampPalette(c("orange", "tomato"))(200)
   
   corrplot(
@@ -117,6 +128,12 @@ plot_corr <- function(df, output_file) {
 plot_uv_by_sex <- function(U, V, sex, title_text, output_file) {
   df <- data.frame(U = U, V = V, Sex = sex)
   
+  # ------------------------------------------------------------
+  # Save source data for scatter points
+  # ------------------------------------------------------------
+  source_scatter_file <- sub("\\.png$", "_source_data_scatter_points.csv", output_file)
+  write.csv(df, file = source_scatter_file, row.names = FALSE)
+
   # Overall and group-specific statistics
   cor_m <- cor.test(df$U[df$Sex == "Male"], df$V[df$Sex == "Male"])
   cor_f <- cor.test(df$U[df$Sex == "Female"], df$V[df$Sex == "Female"])

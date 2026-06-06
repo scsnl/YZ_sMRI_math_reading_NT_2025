@@ -100,8 +100,27 @@ hist(beh$ses_combined)
 
 idx_ses <- which(!is.na(beh$ses_combined))  # Participants with valid SES
 
+print_cor_stats <- function(x, y, label) {
+  idx <- which(!is.na(x) & !is.na(y))
+  ct <- cor.test(x[idx], y[idx], method = "pearson")
+  
+  cat("\n============================================================\n")
+  cat(label, "\n")
+  cat("============================================================\n")
+  cat("N =", length(idx), "\n")
+  cat("Pearson r =", round(unname(ct$estimate), 4), "\n")
+  cat("t(", unname(ct$parameter), ") = ", round(unname(ct$statistic), 4), "\n", sep = "")
+  cat("p =", signif(ct$p.value, 4), "\n")
+  
+  cat("95% CI = [", round(ct$conf.int[1], 4), ", ",round(ct$conf.int[2], 4), "]\n", sep = "")
+}
+
 # Correlation between math CCA scores and SES
-cor.test(Umath[idx_ses], beh$ses_combined[idx_ses])
+print_cor_stats(x = Umath, y = beh$ses_combined,
+  label = "Correlation between Math CCA brain score and SES"
+)
 
 # Correlation between reading CCA scores and SES
-cor.test(Uread[idx_ses], beh$ses_combined[idx_ses])
+print_cor_stats(x = Uread, y = beh$ses_combined,
+  label = "Correlation between Reading CCA brain score and SES"
+)

@@ -45,16 +45,31 @@ plot_corr_y_cy_heatmap_and_scatter <- function(
   ycy_mat <- res$corr.Y.Cy
   ycy_mat_flip <- -1 * ycy_mat
   
-  pretty_rows <- c(
-    "Age",
-    "Numerical Operation",
-    "Math Problem Solving",
-    "Word Reading",
-    "Reading Comprehension"
-  )
-  
-  if (nrow(ycy_mat_flip) == length(pretty_rows)) {
-    rownames(ycy_mat_flip) <- pretty_rows
+  if (nrow(ycy_mat_flip) == 5) {
+    rownames(ycy_mat_flip) <- c(
+      "Age",
+      "Numerical Operation",
+      "Math Problem Solving",
+      "Word Reading",
+      "Reading Comprehension"
+    )
+    
+  } else if (nrow(ycy_mat_flip) == 3) {
+    original_rows <- rownames(ycy_mat_flip)
+    pretty_names <- c(
+      age = "Age",
+      numop_std = "Numerical Operation",
+      mathprob_std = "Math Problem Solving",
+      mathrea_std = "Math Reasoning",
+      wordread_std = "Word Reading",
+      readcomp_std = "Reading Comprehension"
+    )
+    
+    rownames(ycy_mat_flip) <- ifelse(
+      original_rows %in% names(pretty_names),
+      pretty_names[original_rows],
+      original_rows
+    )
   }
   
   colnames(ycy_mat_flip) <- paste0("Mode", seq_len(ncol(ycy_mat_flip)))
@@ -133,8 +148,36 @@ plot_corr_y_cy_heatmap_and_scatter <- function(
   stopifnot(mode_to_plot >= 1, mode_to_plot <= ncol(res$Cx), mode_to_plot <= ncol(res$Cy))
   
   df_scatter <- data.frame(
-    brain = res$Cx[, mode_to_plot],
-    beh   = res$Cy[, mode_to_plot]
+    brain = -1 * res$Cx[, mode_to_plot],
+    beh   = -1 * res$Cy[, mode_to_plot]
+  )
+  
+  # Save source data for scatter points
+  write.csv(
+    df_scatter,
+    file.path(output_dir, paste0("source_data_scatter_points_mode", mode_to_plot, "_sign_oriented.csv")),
+    row.names = FALSE
+  )
+  
+  # Save source data for fitted regression line and 95% CI band
+  lm_fit <- lm(beh ~ brain, data = df_scatter)
+  brain_grid <- data.frame(
+    brain = seq(min(df_scatter$brain, na.rm = TRUE), max(df_scatter$brain, na.rm = TRUE),length.out = 200)
+  )
+  
+  pred_ci <- predict(lm_fit, newdata = brain_grid, interval = "confidence",level = 0.95)
+  
+  df_fit_ci <- data.frame(
+    brain = brain_grid$brain,
+    fitted_beh = pred_ci[, "fit"],
+    ci_lower = pred_ci[, "lwr"],
+    ci_upper = pred_ci[, "upr"]
+  )
+  
+  write.csv(
+    df_fit_ci,
+    file.path(output_dir, paste0("source_data_scatter_fit_95CI_mode", mode_to_plot, "_sign_oriented.csv")),
+    row.names = FALSE
   )
   
   p_scatter <- ggplot(df_scatter, aes(x = brain, y = beh)) +
@@ -185,38 +228,101 @@ plot_corr_y_cy_heatmap_and_scatter <- function(
 # 3. File paths
 # ------------------------------------------------------------------
 
-# CMI
-cmi_rdata <- paste0(
-  "results/cca/cmi/wholebrain_cca_cmi_math_reading_combined/",
-  "CCA_PCA_roi_gmv_brainnetome_mathreadingstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+analysis_list <- list(
+  # Combined models
+  cmi_combined = list(
+    rdata_file = paste0(
+      "results/cca/cmi/wholebrain_cca_cmi_math_reading_combined/",
+      "CCA_PCA_roi_gmv_brainnetome_mathreadingstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/cmi/wholebrain_cca_cmi_math_reading_combined/",
+    cohort_label = "CMI Combined CCA",
+    mode_to_plot = 2
+  ),
+  
+  stanford_combined = list(
+    rdata_file = paste0(
+      "results/cca/stanford/wholebrain_cca_stanford_math_reading_combined/",
+      "CCA_PCA_roi_gmv_brainnetome_mathreadingstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/stanford/wholebrain_cca_stanford_math_reading_combined/",
+    cohort_label = "Stanford Combined CCA",
+    mode_to_plot = 2
+  ),
+  
+  # Math-only models
+  cmi_math = list(
+    rdata_file = paste0(
+      "results/cca/cmi/wholebrain_cca_cmi_math/",
+      "CCA_PCA_roi_gmv_brainnetome_mathstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/cmi/wholebrain_cca_cmi_math/",
+    cohort_label = "CMI Math CCA",
+    mode_to_plot = 2
+  ),
+  
+  stanford_math = list(
+    rdata_file = paste0(
+      "results/cca/stanford/wholebrain_cca_stanford_math/",
+      "CCA_PCA_roi_gmv_brainnetome_mathstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/stanford/wholebrain_cca_stanford_math/",
+    cohort_label = "Stanford Math CCA",
+    mode_to_plot = 2
+  ),
+  
+  # Reading-only models
+  cmi_reading = list(
+    rdata_file = paste0(
+      "results/cca/cmi/wholebrain_cca_cmi_reading/",
+      "CCA_PCA_roi_gmv_brainnetome_readstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/cmi/wholebrain_cca_cmi_reading/",
+    cohort_label = "CMI Reading CCA",
+    mode_to_plot = 2
+  ),
+  
+  stanford_reading = list(
+    rdata_file = paste0(
+      "results/cca/stanford/wholebrain_cca_stanford_reading/",
+      "CCA_PCA_roi_gmv_brainnetome_readstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
+    ),
+    output_dir = "results/cca/stanford/wholebrain_cca_stanford_reading/",
+    cohort_label = "Stanford Reading CCA",
+    mode_to_plot = 2
+  )
 )
-cmi_outdir <- "results/cca/cmi/wholebrain_cca_cmi_math_reading_combined/"
-
-# Stanford
-stan_rdata <- paste0(
-  "results/cca/stanford/wholebrain_cca_stanford_math_reading_combined/",
-  "CCA_PCA_roi_gmv_brainnetome_mathreadingstd_ageinmodel_perm5000_pcaNoscale_ccaNoScale.RData"
-)
-stan_outdir <- "results/cca/stanford/wholebrain_cca_stanford_math_reading_combined/"
 
 # ------------------------------------------------------------------
-# 4. Run for both cohorts
+# 4. Run all analyses
 # ------------------------------------------------------------------
-plots_cmi <- plot_corr_y_cy_heatmap_and_scatter(
-  rdata_file = cmi_rdata,
-  output_dir = cmi_outdir,
-  cohort_label = "CMI Combined CCA",
-  mode_to_plot = 2
-)
 
-plots_stan <- plot_corr_y_cy_heatmap_and_scatter(
-  rdata_file = stan_rdata,
-  output_dir = stan_outdir,
-  cohort_label = "Stanford Combined CCA",
-  mode_to_plot = 2
-)
+plots_all <- list()
 
-print(plots_cmi$heatmap)
-print(plots_cmi$scatter)
-print(plots_stan$heatmap)
-print(plots_stan$scatter)
+for (analysis_name in names(analysis_list)) {
+  cat("\n----------------------------------------\n")
+  cat("Running visualization for:", analysis_name, "\n")
+  cat("----------------------------------------\n")
+  
+  a <- analysis_list[[analysis_name]]
+  
+  if (!file.exists(a$rdata_file)) {
+    warning(paste("File not found, skipping:", a$rdata_file))
+    next
+  }
+  
+  dir.create(a$output_dir, showWarnings = FALSE, recursive = TRUE)
+  
+  plots_all[[analysis_name]] <- plot_corr_y_cy_heatmap_and_scatter(
+    rdata_file = a$rdata_file,
+    output_dir = a$output_dir,
+    cohort_label = a$cohort_label,
+    mode_to_plot = a$mode_to_plot
+  )
+}
+
+# Optional: print all plots
+for (analysis_name in names(plots_all)) {
+  print(plots_all[[analysis_name]]$heatmap)
+  print(plots_all[[analysis_name]]$scatter)
+}

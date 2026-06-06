@@ -1,18 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Generate Whole-Brain and Thresholded GMV Weight Maps for CCA Modes
+% Generate Whole-Brain GMV Weight Maps for CCA Modes
 % Author: Yuan Zhang
 % Date: 2025-07-25
 %
 % Description:
-% This script generates NIfTI brain maps and thresholded maps 
-% for both math- and reading-related modes, across both CMI and Stanford cohorts. 
+% This script generates whole-brain NIfTI brain maps for both math- and
+% reading-related modes, across both CMI and Stanford cohorts.
 % It uses GMV loading weights from CCA results.
 %
 % For each dataset-mode combination:
 %   1) Load CCA coefficients from CSV.
 %   2) Map ROI weights to the Brainnetome atlas.
-%   3) Save whole-brain GMV weight maps (NIfTI).
-%   4) Save thresholded top-percentile GMV weight maps and their ROI indices.
+%   3) Save whole-brain GMV weight maps as float32 compressed NIfTI files.
+%   4) Save ROI-level source data used to generate the NIfTI maps.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ----------------------------------------------------------------------
@@ -32,8 +32,11 @@ nroi = 218;
 % Output suffix (for filenames)
 postfix = "ageinmodel_SignChanged_cca";
 
-% Threshold percentile for creating top-weighted maps
-thresh = 80;  % Keep weights in top 20% by absolute value
+% Output directory
+brainmap_dir = sprintf('%s/results/cca/brainmaps', project_path);
+if ~exist(brainmap_dir, 'dir')
+    mkdir(brainmap_dir);
+end
 
 %% ----------------------------------------------------------------------
 % 2. Define Datasets and Modes
@@ -83,7 +86,7 @@ for c = 1:size(configs, 1)
     % Find columns that correspond to brain weights for mode 2
     col_idx = find(strcmp(colnames, 'xloading_m2'));
     
-    % Process each "xloading_m2" column (only 1 map, but used for loop for flexibility)
+    % Process each "xloading_m2" column
     for ii = 1:length(col_idx)
         i = col_idx(ii);
         col_name = colnames{i};
@@ -93,48 +96,54 @@ for c = 1:size(configs, 1)
         % Extract brain weight vector for all ROIs
         dat = data{:, col_name};
         
+        % Sign-oriented ROI values actually used for NIfTI visualization
+        dat_sign_oriented = -1 * dat;
+        
         % ------------------------------------------------------------------
-        % 4.1 Whole-Brain Map
+        % 4.1 Save ROI-level source data used for NIfTI map
         % ------------------------------------------------------------------
-        Y_new = zeros(size(Y));
+        roi_id = (1:nroi)';
+        
+        source_table = table( ...
+            roi_id, ...
+            dat(:), ...
+            dat_sign_oriented(:), ...
+            'VariableNames', { ...
+                'ROI_ID', ...
+                'Original_xloading_m2', ...
+                'Sign_oriented_value_used_for_NIfTI' ...
+            } ...
+        );
+        
+        source_csv_file = sprintf('%s/%s_%s_%s_source_data_roi_values.csv', ...
+            brainmap_dir, col_name, mode_name, postfix);
+        
+        writetable(source_table, source_csv_file);
+        
+        % ------------------------------------------------------------------
+        % 4.2 Whole-Brain Map
+        % ------------------------------------------------------------------
+        Y_new = zeros(size(Y), 'single');  % float32 array
+        
         for j = 1:nroi
-            % Assign GMV weight to voxels of ROI j (inverse sign if needed)
-            Y_new(Y == j) = -1 * dat(j);
+            % Assign sign-oriented GMV weight to voxels of ROI j
+            Y_new(Y == j) = single(dat_sign_oriented(j));
         end
         
         % Output NIfTI for the whole-brain GMV weight map
-        output_file = sprintf('%s/results/cca/brainmaps/%s_%s_%s.nii', ...
-            project_path, col_name, mode_name, postfix);
-        V.fname = output_file;
-        V.dt = [64 0];  % 64 = float32
-        V.private.dat.fname = V.fname;  
-        spm_write_vol(V, Y_new);
+        output_file = sprintf('%s/%s_%s_%s.nii', ...
+            brainmap_dir, col_name, mode_name, postfix);
         
-        % ------------------------------------------------------------------
-        % 4.2 Thresholded Map
-        % ------------------------------------------------------------------
-        % Determine threshold value (top 20% of absolute values)
-        P = prctile(abs(dat), thresh);
-        idx = find(abs(dat) > P);  % ROI indices above threshold
+        Vout = V;
+        Vout.fname = output_file;
+        Vout.dt = [16 0];  % 16 = float32 in SPM
+        Vout.private.dat.fname = Vout.fname;
         
-        % Save the indices of thresholded ROIs
-        idx_output_f = sprintf('%s/results/cca/brainmaps/%s_thr%d_%s_%s.csv', ...
-            project_path, col_name, thresh, mode_name, postfix);
-        writematrix(idx(:), idx_output_f);
+        spm_write_vol(Vout, Y_new);
         
-        % Build thresholded NIfTI map
-        Y_new_thr = zeros(size(Y));
-        for j = 1:length(idx)
-            Y_new_thr(Y == idx(j)) = -1 * dat(idx(j));
-        end
-        
-        % Output thresholded NIfTI
-        output_file_top = sprintf('%s/results/cca/brainmaps/%s_thr%d_%s_%s.nii', ...
-            project_path, col_name, thresh, mode_name, postfix);
-        V.fname = output_file_top;
-        V.dt = [64 0];
-        V.private.dat.fname = V.fname;  
-        spm_write_vol(V, Y_new_thr);
+        % Compress to .nii.gz and remove uncompressed .nii
+        gzip(output_file);
+        delete(output_file);
     end
 end
 

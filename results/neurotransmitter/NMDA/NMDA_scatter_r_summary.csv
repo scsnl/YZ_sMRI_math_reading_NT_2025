@@ -1,0 +1,5 @@
+"analysis","mode","n_ROI","pearson_r","source_data_scatter_points","source_data_fit_95CI"
+"scatter_cmi_math_NMDA",2,218,0.389197324796097,"results/neurotransmitter/NMDA/scatter_cmi_math_NMDA_source_data_scatter_points.csv","results/neurotransmitter/NMDA/scatter_cmi_math_NMDA_source_data_fit_95CI.csv"
+"scatter_cmi_reading_NMDA",2,218,0.304117897299654,"results/neurotransmitter/NMDA/scatter_cmi_reading_NMDA_source_data_scatter_points.csv","results/neurotransmitter/NMDA/scatter_cmi_reading_NMDA_source_data_fit_95CI.csv"
+"scatter_stanford_math_NMDA",2,218,0.448025021446162,"results/neurotransmitter/NMDA/scatter_stanford_math_NMDA_source_data_scatter_points.csv","results/neurotransmitter/NMDA/scatter_stanford_math_NMDA_source_data_fit_95CI.csv"
+"scatter_stanford_reading_NMDA",2,218,0.297201128329168,"results/neurotransmitter/NMDA/scatter_stanford_reading_NMDA_source_data_scatter_points.csv","results/neurotransmitter/NMDA/scatter_stanford_reading_NMDA_source_data_fit_95CI.csv"

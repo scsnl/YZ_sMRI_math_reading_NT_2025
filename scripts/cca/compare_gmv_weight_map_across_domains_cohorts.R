@@ -58,12 +58,21 @@ write.csv(p_mat,   file.path(out_dir, "gmv_map_pvalue_matrix.csv"))
 
 pairs <- combn(colnames(map_df), 2, simplify = FALSE)
 pairwise_results <- do.call(rbind, lapply(pairs, function(pair) {
-  test <- cor.test(map_df[[pair[1]]], map_df[[pair[2]]], method = "pearson")
+  x <- map_df[[pair[1]]]
+  y <- map_df[[pair[2]]]
+  idx <- which(!is.na(x) & !is.na(y))
+  test <- cor.test(x[idx], y[idx], method = "pearson")
+  
   data.frame(
     var1 = pair[1],
     var2 = pair[2],
+    n = length(idx),
     r = unname(test$estimate),
+    t = unname(test$statistic),
+    df = unname(test$parameter),
     p = test$p.value,
+    ci_lower = test$conf.int[1],
+    ci_upper = test$conf.int[2],
     stringsAsFactors = FALSE
   )
 }))
@@ -208,18 +217,47 @@ make_scatter(
 # ----------------------------------------------------------
 # 7. Simple summary table
 # ----------------------------------------------------------
-summary_df <- data.frame(
-  comparison = c(
-    "CMI_math_vs_Stanford_math",
-    "CMI_math_vs_CMI_reading",
-    "CMI_reading_vs_Stanford_read",
-    "CMI_reading_vs_CMI_math"
+get_cor_stats <- function(df, xvar, yvar, comparison_name) {
+  x <- df[[xvar]]
+  y <- df[[yvar]]
+  idx <- which(!is.na(x) & !is.na(y))
+  test <- cor.test(x[idx], y[idx], method = "pearson")
+  
+  data.frame(
+    comparison = comparison_name,
+    var1 = xvar,
+    var2 = yvar,
+    n = length(idx),
+    r = unname(test$estimate),
+    t = unname(test$statistic),
+    df = unname(test$parameter),
+    p = test$p.value,
+    ci_lower = test$conf.int[1],
+    ci_upper = test$conf.int[2],
+    stringsAsFactors = FALSE
+  )
+}
+
+summary_df <- rbind(
+  get_cor_stats(
+    map_df,
+    "CMI_math", "Stanford_math",
+    "CMI_math_vs_Stanford_math"
   ),
-  r = c(
-    r_jk_1,
-    r_jh_1,
-    r_jk_2,
-    r_jh_2
+  get_cor_stats(
+    map_df,
+    "CMI_math", "CMI_reading",
+    "CMI_math_vs_CMI_reading"
+  ),
+  get_cor_stats(
+    map_df,
+    "CMI_reading", "Stanford_read",
+    "CMI_reading_vs_Stanford_read"
+  ),
+  get_cor_stats(
+    map_df,
+    "CMI_reading", "CMI_math",
+    "CMI_reading_vs_CMI_math"
   )
 )
 
@@ -244,3 +282,21 @@ cat("CMI_reading vs Stanford_read > CMI_reading vs CMI_math ? ",
     r_jk_2 > r_jh_2, "\n")
 
 cat("\nResults saved to:\n", out_dir, "\n")
+
+cat("\n==============================\n")
+cat("Formatted correlation results\n")
+cat("==============================\n")
+
+for (i in 1:nrow(summary_df)) {
+  cat(
+    summary_df$comparison[i], ": ",
+    "r = ", sprintf("%.3f", summary_df$r[i]),
+    ", t(", summary_df$df[i], ") = ", sprintf("%.3f", summary_df$t[i]),
+    ", p = ", formatC(summary_df$p[i], format = "e", digits = 2),
+    ", 95% CI [", sprintf("%.3f", summary_df$ci_lower[i]), ", ",
+    sprintf("%.3f", summary_df$ci_upper[i]), "]",
+    ", n = ", summary_df$n[i],
+    "\n",
+    sep = ""
+  )
+}
